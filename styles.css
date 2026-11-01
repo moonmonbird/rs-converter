@@ -1,0 +1,439 @@
+:root{
+  font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;
+  color:#23372f;
+  background:#f3f5f1;
+  font-synthesis:none;
+  --green:#186351;
+  --muted:#7a8781;
+  --line:#e3e8e2}
+  *{
+    box-sizing:border-box}
+    body{
+      margin:0}
+      button,input,a{
+        font:inherit}
+        button,a{
+          touch-action:manipulation}
+          button{
+            cursor:pointer}
+            button:disabled{
+              cursor:default;
+              opacity:.45}
+              button:focus-visible,a:focus-visible,input:focus-visible{
+                outline:3px solid #65bbaa;
+                outline-offset:3px}
+                [hidden]{
+                  display:none!important}
+                  .shell{
+                    max-width:1240px;
+                    margin:auto;
+                    padding:38px 44px 52px}
+                    .page-head,.brand,.panel-head,.intro,.preview-controls,.file-line,.sample-card,.export-size{
+                      display:flex;
+                      align-items:center}
+                      .page-head,.panel-head,.intro,.file-line,.export-size{
+                        justify-content:space-between}
+                        .brand{
+                          gap:13px}
+                          .eyebrow{
+                            font-size:10px;
+                            letter-spacing:2px;
+                            color:var(--muted);
+                            margin:0 0 5px;
+                            font-weight:600}
+                            h1{
+                              font-size:24px;
+                              font-weight:650;
+                              letter-spacing:1px;
+                              margin:0}
+                              h2{
+                                font-size:14px;
+                                margin:0;
+                                font-weight:600}
+                                .course-tag{
+                                  border:1px solid #d5ded5;
+                                  border-radius:20px;
+                                  padding:6px 13px;
+                                  font-size:12px;
+                                  color:#657669}
+                                  .intro{
+                                    margin:32px 0 23px}
+                                    .intro p{
+                                      margin:0;
+                                      color:#63746b;
+                                      font-size:15px}
+                                      .intro>span{
+                                        font-size:12px;
+                                        font-weight:650;
+                                        letter-spacing:1px;
+                                        color:#688076}
+                                        .intro i{
+                                          font-style:normal;
+                                          color:#a7b4ac;
+                                          margin:0 10px}
+                                          .workspace{
+                                            display:grid;
+                                            grid-template-columns:minmax(0,1fr) 306px;
+                                            gap:24px;
+                                            align-items:start}
+                                            .preview-card,.settings-card{
+                                              background:#fff;
+                                              border:1px solid var(--line);
+                                              border-radius:16px;
+                                              overflow:hidden;
+                                              box-shadow:0 5px 18px #244a3610}
+                                              .panel-head{
+                                                padding:20px 22px}
+                                                .panel-head>span{
+                                                  font-size:11px;
+                                                  color:var(--muted)}
+                                                  .viewer{
+                                                    height:440px;
+                                                    margin:0 18px;
+                                                    background:#182c29;
+                                                    border-radius:10px;
+                                                    position:relative;
+                                                    display:flex;
+                                                    align-items:center;
+                                                    justify-content:center;
+                                                    overflow:hidden}
+                                                    .viewer.drag{
+                                                      box-shadow:inset 0 0 0 3px #71c8ad}
+                                                      .empty-state{
+                                                        color:#d7e3dc;
+                                                        text-align:center;
+                                                        display:flex;
+                                                        align-items:center;
+                                                        flex-direction:column}
+                                                        .empty-state svg{
+                                                          fill:none;
+                                                          stroke:#7eac99;
+                                                          stroke-width:1.4;
+                                                          margin-bottom:18px}
+                                                          .empty-state h3{
+                                                            font-size:18px;
+                                                            font-weight:500;
+                                                            margin:0 0 8px}
+                                                            .empty-state p{
+                                                              color:#98b0a3;
+                                                              font-size:12px;
+                                                              margin:0 0 22px}
+                                                              .file-types{
+                                                                font-size:10px;
+                                                                color:#93aa9e;
+                                                                margin-top:16px}
+                                                                .button{
+                                                                  border:1px solid #dce4de;
+                                                                  border-radius:8px;
+                                                                  background:#fff;
+                                                                  color:#344c40;
+                                                                  padding:10px 17px;
+                                                                  font-size:12px;
+                                                                  font-weight:550}
+                                                                  .button.light{
+                                                                    background:#dcece3;
+                                                                    border:0;
+                                                                    color:#214d38}
+                                                                    .button.primary{
+                                                                      display:flex;
+                                                                      gap:9px;
+                                                                      justify-content:center;
+                                                                      align-items:center;
+                                                                      width:100%;
+                                                                      background:var(--green);
+                                                                      border-color:var(--green);
+                                                                      color:#fff;
+                                                                      padding:14px;
+                                                                      font-size:13px}
+                                                                      .button.primary:hover:enabled{
+                                                                        background:#124f41}
+                                                                        .button svg{
+                                                                          fill:none;
+                                                                          stroke:currentColor;
+                                                                          stroke-width:1.8;
+                                                                          stroke-linejoin:round;
+                                                                          stroke-linecap:round}
+                                                                          .button.small{
+                                                                            padding:7px 12px;
+                                                                            font-size:11px}
+                                                                            .text-button{
+                                                                              border:0;
+                                                                              background:transparent;
+                                                                              color:var(--green);
+                                                                              padding:5px 2px;
+                                                                              font-size:11px;
+                                                                              white-space:nowrap}
+                                                                              .preview-controls{
+                                                                                padding:18px 22px;
+                                                                                gap:11px;
+                                                                                font-size:11px}
+                                                                                .preview-controls label{
+                                                                                  color:#728278}
+                                                                                  .preview-controls input{
+                                                                                    border:1px solid #dfe6df;
+                                                                                    border-radius:6px;
+                                                                                    padding:7px 9px;
+                                                                                    width:76px;
+                                                                                    font-size:12px;
+                                                                                    color:#314939}
+                                                                                    .preview-controls .text-button{
+                                                                                      margin-left:2px}
+                                                                                      canvas{
+                                                                                        max-width:100%;
+                                                                                        max-height:100%;
+                                                                                        object-fit:contain;
+                                                                                        image-rendering:auto}
+                                                                                        .image-info{
+                                                                                          border-top:1px solid #eef1ec;
+                                                                                          padding:15px 22px 18px}
+                                                                                          .file-line{
+                                                                                            gap:12px}
+                                                                                            .file-line strong{
+                                                                                              font-size:12px;
+                                                                                              font-weight:500;
+                                                                                              overflow:hidden;
+                                                                                              text-overflow:ellipsis;
+                                                                                              white-space:nowrap}
+                                                                                              .image-info dl{
+                                                                                                display:grid;
+                                                                                                grid-template-columns:1.5fr .7fr 1fr 1.2fr;
+                                                                                                gap:12px;
+                                                                                                margin:14px 0 0}
+                                                                                                .image-info dt{
+                                                                                                  color:#89958d;
+                                                                                                  font-size:10px;
+                                                                                                  margin:0 0 5px}
+                                                                                                  .image-info dd{
+                                                                                                    font-size:11px;
+                                                                                                    margin:0;
+                                                                                                    word-break:break-word}
+                                                                                                    .settings-card .panel-head{
+                                                                                                      padding-bottom:15px}
+                                                                                                      .step{
+                                                                                                        font-family:monospace;
+                                                                                                        letter-spacing:1px}
+                                                                                                        fieldset{
+                                                                                                          border:0;
+                                                                                                          margin:0;
+                                                                                                          padding:0 20px}
+                                                                                                          legend{
+                                                                                                            font-size:11px;
+                                                                                                            color:#7f8e84;
+                                                                                                            margin-bottom:11px}
+                                                                                                            .format-option{
+                                                                                                              display:flex;
+                                                                                                              align-items:center;
+                                                                                                              gap:12px;
+                                                                                                              cursor:pointer;
+                                                                                                              border:1px solid #e0e7e0;
+                                                                                                              border-radius:9px;
+                                                                                                              padding:15px 12px;
+                                                                                                              margin-bottom:11px;
+                                                                                                              transition:background .16s,border-color .16s}
+                                                                                                              .format-option:has(input:checked){
+                                                                                                                border-color:#428d70;
+                                                                                                                background:#f2f8f3}
+                                                                                                                .format-option input{
+                                                                                                                  accent-color:var(--green);
+                                                                                                                  width:14px;
+                                                                                                                  height:14px;
+                                                                                                                  margin:0}
+                                                                                                                  .format-text{
+                                                                                                                    display:flex;
+                                                                                                                    flex:1;
+                                                                                                                    flex-direction:column;
+                                                                                                                    gap:4px}
+                                                                                                                    .format-text strong{
+                                                                                                                      font-size:14px;
+                                                                                                                      letter-spacing:1px;
+                                                                                                                      font-weight:600}
+                                                                                                                      .format-text>span{
+                                                                                                                        font-size:10px;
+                                                                                                                        color:#849087}
+                                                                                                                        .layout-icon{
+                                                                                                                          display:flex;
+                                                                                                                          width:30px;
+                                                                                                                          height:23px;
+                                                                                                                          gap:3px}
+                                                                                                                          .layout-icon i:nth-child(1){
+                                                                                                                            background:#4c9473}
+                                                                                                                            .layout-icon i:nth-child(2){
+                                                                                                                              background:#9bc1a0}
+                                                                                                                              .layout-icon i:nth-child(3){
+                                                                                                                                background:#d2dfb8}
+                                                                                                                                .layout-icon.bsq i{
+                                                                                                                                  width:8px;
+                                                                                                                                  border-radius:2px}
+                                                                                                                                  .layout-icon.bil{
+                                                                                                                                    flex-direction:column}
+                                                                                                                                    .layout-icon.bil i{
+                                                                                                                                      height:6px;
+                                                                                                                                      border-radius:1px}
+                                                                                                                                      .layout-icon.bip{
+                                                                                                                                        gap:1px;
+                                                                                                                                        align-items:center}
+                                                                                                                                        .layout-icon.bip i{
+                                                                                                                                          height:19px;
+                                                                                                                                          width:9px;
+                                                                                                                                          background:repeating-linear-gradient(0deg,#4c9473 0 3px,#9bc1a0 3px 6px,#d2dfb8 6px 9px)}
+                                                                                                                                          .export-size{
+                                                                                                                                            padding:12px 22px 20px;
+                                                                                                                                            font-size:11px;
+                                                                                                                                            color:#7e8d83}
+                                                                                                                                            .export-size strong{
+                                                                                                                                              font-size:12px;
+                                                                                                                                              color:#3d5345;
+                                                                                                                                              font-weight:500}
+                                                                                                                                              .settings-card>.button{
+                                                                                                                                                width:calc(100% - 40px);
+                                                                                                                                                margin:0 20px}
+                                                                                                                                                .download-caption{
+                                                                                                                                                  text-align:center;
+                                                                                                                                                  color:#97a198;
+                                                                                                                                                  font-size:10px;
+                                                                                                                                                  margin:10px 0 17px}
+                                                                                                                                                  .status{
+                                                                                                                                                    font-size:11px;
+                                                                                                                                                    line-height:1.8;
+                                                                                                                                                    padding:14px 20px;
+                                                                                                                                                    background:#f8faf7;
+                                                                                                                                                    color:#7a897e;
+                                                                                                                                                    border-top:1px solid #edf1eb;
+                                                                                                                                                    min-height:49px;
+                                                                                                                                                    overflow-wrap:anywhere}
+                                                                                                                                                    .status.error{
+                                                                                                                                                      color:#a34636;
+                                                                                                                                                      background:#fff5f0}
+                                                                                                                                                      .status.success{
+                                                                                                                                                        color:#267253;
+                                                                                                                                                        background:#eff8f1}
+                                                                                                                                                        .sample-card{
+                                                                                                                                                          gap:12px;
+                                                                                                                                                          border:1px solid #dce5d8;
+                                                                                                                                                          background:#eaf0e4;
+                                                                                                                                                          border-radius:13px;
+                                                                                                                                                          padding:18px;
+                                                                                                                                                          margin-top:18px}
+                                                                                                                                                          .sample-icon{
+                                                                                                                                                            background:#d4e2c9;
+                                                                                                                                                            border:1px solid #c5d6bc;
+                                                                                                                                                            border-radius:8px;
+                                                                                                                                                            width:36px;
+                                                                                                                                                            height:40px;
+                                                                                                                                                            display:grid;
+                                                                                                                                                            place-items:center;
+                                                                                                                                                            font-size:12px;
+                                                                                                                                                            font-weight:650;
+                                                                                                                                                            color:#507347}
+                                                                                                                                                            .sample-card h2{
+                                                                                                                                                              font-size:12px}
+                                                                                                                                                              .sample-card p{
+                                                                                                                                                                font-size:10px;
+                                                                                                                                                                color:#85937c;
+                                                                                                                                                                margin:6px 0 0}
+                                                                                                                                                                .sample-card .text-button{
+                                                                                                                                                                  margin-left:auto;
+                                                                                                                                                                  font-size:11px}
+                                                                                                                                                                  .progress-area{
+                                                                                                                                                                    padding:0 20px 12px}
+                                                                                                                                                                    .progress-area progress{
+                                                                                                                                                                      width:100%;
+                                                                                                                                                                      height:5px;
+                                                                                                                                                                      accent-color:var(--green)}
+                                                                                                                                                                      .progress-area>div{
+                                                                                                                                                                        display:flex;
+                                                                                                                                                                        justify-content:space-between;
+                                                                                                                                                                        align-items:center;
+                                                                                                                                                                        font-size:10px;
+                                                                                                                                                                        color:#6b7c70;
+                                                                                                                                                                        margin-top:4px}
+                                                                                                                                                                        .download-again{
+                                                                                                                                                                          display:block;
+                                                                                                                                                                          text-align:center;
+                                                                                                                                                                          padding:11px;
+                                                                                                                                                                          color:var(--green);
+                                                                                                                                                                          font-size:12px;
+                                                                                                                                                                          text-decoration:none;
+                                                                                                                                                                          border-top:1px solid var(--line)}
+                                                                                                                                                                          .loading{
+                                                                                                                                                                            position:absolute;
+                                                                                                                                                                            inset:0;
+                                                                                                                                                                            background:#152b28b8;
+                                                                                                                                                                            display:flex;
+                                                                                                                                                                            align-items:center;
+                                                                                                                                                                            justify-content:center;
+                                                                                                                                                                            flex-direction:column;
+                                                                                                                                                                            gap:16px;
+                                                                                                                                                                            color:#e4eee8;
+                                                                                                                                                                            font-size:12px}
+                                                                                                                                                                            .spinner{
+                                                                                                                                                                              width:26px;
+                                                                                                                                                                              height:26px;
+                                                                                                                                                                              border:2px solid #8faf9d66;
+                                                                                                                                                                              border-top-color:#bcdfce;
+                                                                                                                                                                              border-radius:100%;
+                                                                                                                                                                              animation:spin 1s linear infinite}
+                                                                                                                                                                              @keyframes spin{
+                                                                                                                                                                                to{
+                                                                                                                                                                                  transform:rotate(360deg)}
+                                                                                                                                                                                }
+                                                                                                                                                                                @media(max-width:850px){
+                                                                                                                                                                                  .shell{
+                                                                                                                                                                                    padding:26px 20px 36px}
+                                                                                                                                                                                    .workspace{
+                                                                                                                                                                                      grid-template-columns:minmax(0,1fr) 270px;
+                                                                                                                                                                                      gap:16px}
+                                                                                                                                                                                      .viewer{
+                                                                                                                                                                                        height:380px}
+                                                                                                                                                                                        .preview-controls{
+                                                                                                                                                                                          gap:7px;
+                                                                                                                                                                                          padding-inline:17px}
+                                                                                                                                                                                          .image-info dl{
+                                                                                                                                                                                            grid-template-columns:1fr 1fr}
+                                                                                                                                                                                            .intro{
+                                                                                                                                                                                              margin-top:27px}
+                                                                                                                                                                                            }
+                                                                                                                                                                                            @media(max-width:650px){
+                                                                                                                                                                                              .shell{
+                                                                                                                                                                                                padding:24px 16px 32px}
+                                                                                                                                                                                                .workspace{
+                                                                                                                                                                                                  grid-template-columns:1fr}
+                                                                                                                                                                                                  .viewer{
+                                                                                                                                                                                                    height:330px;
+                                                                                                                                                                                                    margin-inline:12px}
+                                                                                                                                                                                                    .page-head h1{
+                                                                                                                                                                                                      font-size:20px}
+                                                                                                                                                                                                      .eyebrow{
+                                                                                                                                                                                                        font-size:9px}
+                                                                                                                                                                                                        .brand img{
+                                                                                                                                                                                                          width:38px;
+                                                                                                                                                                                                          height:38px}
+                                                                                                                                                                                                          .intro>span{
+                                                                                                                                                                                                            font-size:10px}
+                                                                                                                                                                                                            .intro i{
+                                                                                                                                                                                                              margin:0 3px}
+                                                                                                                                                                                                              .intro p{
+                                                                                                                                                                                                                font-size:13px}
+                                                                                                                                                                                                                .panel-head{
+                                                                                                                                                                                                                  padding:18px}
+                                                                                                                                                                                                                  .side-panel{
+                                                                                                                                                                                                                    display:flex;
+                                                                                                                                                                                                                    flex-direction:column}
+                                                                                                                                                                                                                    .settings-card{
+                                                                                                                                                                                                                      order:1}
+                                                                                                                                                                                                                      .sample-card{
+                                                                                                                                                                                                                        order:0;
+                                                                                                                                                                                                                        margin:0 0 16px}
+                                                                                                                                                                                                                        .preview-controls{
+                                                                                                                                                                                                                          gap:10px}
+                                                                                                                                                                                                                          .image-info dl{
+                                                                                                                                                                                                                            grid-template-columns:1.4fr .7fr 1fr 1.2fr}
+                                                                                                                                                                                                                            .format-option{
+                                                                                                                                                                                                                              padding:13px}
+                                                                                                                                                                                                                              .empty-state h3{
+                                                                                                                                                                                                                                font-size:16px}
+                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                              @media(prefers-reduced-motion:reduce){
+                                                                                                                                                                                                                                .spinner{
+                                                                                                                                                                                                                                  animation:none}
+                                                                                                                                                                                                                                }

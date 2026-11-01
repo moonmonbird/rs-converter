@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#186351">
+  <meta name="description" content="在线打开 Landsat 影像，预览并转换 BSQ、BIL、BIP 遥感存储格式。">
+  <title>遥感格式转换 · BSQ / BIL / BIP</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="page-head">
+      <div class="brand"><img src="icon.svg" alt="" width="44" height="44"><div><p class="eyebrow">REMOTE SENSING</p><h1>遥感格式转换</h1></div></div>
+      <span class="course-tag">2024012606</span>
+    </header>
+    <div class="intro"><p>打开影像，切换存储方式。</p><span>BSQ <i>↔</i> BIL <i>↔</i> BIP</span></div>
+    <div class="workspace">
+      <section class="preview-card" aria-label="影像预览">
+        <div class="panel-head"><h2>影像预览</h2><span id="preview-label">尚未打开</span></div>
+        <div class="viewer" id="drop-zone">
+          <div id="empty-state" class="empty-state">
+            <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect x="10" y="10" width="44" height="44" rx="9"/><path d="M10 42l14-14 11 11 8-8 11 11M40 22h.1"/></svg>
+            <h3>从一幅影像开始</h3><p>拖入文件，或选择影像打开</p>
+            <button class="button light" id="open-main">选择影像</button>
+            <span class="file-types">GeoTIFF，或 ENVI 数据文件与 .hdr</span>
+          </div>
+          <canvas id="preview" hidden aria-label="遥感影像缩略图"></canvas>
+          <div id="loading" class="loading" hidden><span class="spinner"></span><span id="loading-text">正在读取影像</span></div>
+        </div>
+        <div class="preview-controls"><label for="bands">预览波段</label><input id="bands" value="1,1,1" inputmode="text" aria-label="RGB 波段编号" disabled><button class="button small" id="preview-button" disabled>更新</button><button class="text-button" id="gray-button" disabled>灰度</button><button class="text-button" id="rgb-button" disabled>RGB</button></div>
+        <div class="image-info" id="image-info" hidden><div class="file-line"><strong id="file-name"></strong><button class="text-button" id="replace-button">更换影像</button></div><dl><div><dt>尺寸</dt><dd id="dimensions">—</dd></div><div><dt>波段</dt><dd id="band-count">—</dd></div><div><dt>数据类型</dt><dd id="dtype">—</dd></div><div><dt>坐标系</dt><dd id="crs">—</dd></div></dl></div>
+      </section>
+      <aside class="side-panel">
+        <section class="settings-card">
+          <div class="panel-head"><h2>转换设置</h2></div>
+          <fieldset><legend>目标格式</legend>
+            <label class="format-option"><input type="radio" name="format" value="bsq" checked><span class="format-text"><strong>BSQ</strong><span>按波段存储</span></span><span class="layout-icon bsq"><i></i><i></i><i></i></span></label>
+            <label class="format-option"><input type="radio" name="format" value="bil"><span class="format-text"><strong>BIL</strong><span>按行交错存储</span></span><span class="layout-icon bil"><i></i><i></i><i></i></span></label>
+            <label class="format-option"><input type="radio" name="format" value="bip"><span class="format-text"><strong>BIP</strong><span>按像元交错存储</span></span><span class="layout-icon bip"><i></i><i></i><i></i></span></label>
+          </fieldset>
+          <div class="export-size"><span>输出数据大小</span><strong id="output-size">—</strong></div>
+          <button class="button primary" id="convert-button" disabled><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>转换并下载</button>
+          <p class="download-caption">ZIP 包含影像数据和配套头文件</p>
+          <div class="progress-area" id="progress-area" hidden><progress id="progress" value="0" max="1"></progress><div><span id="progress-label">正在转换</span><button class="text-button" id="cancel-button">取消</button></div></div>
+          <div class="status" id="status" role="status" aria-live="polite">请选择影像或打开样例</div>
+          <a id="download-again" class="download-again" hidden>下载转换结果</a>
+        </section>
+        <section class="sample-card"><div class="sample-icon">L8</div><div><h2>Landsat 样例</h2><p>512 × 512 · 6 波段</p></div><button class="text-button" id="sample-button">打开 <span aria-hidden="true">↗</span></button></section>
+      </aside>
+    </div>
+    <input id="files" type="file" accept=".tif,.tiff,.hdr,.bsq,.bil,.bip,.img,.dat,.raw" multiple hidden>
+  </main>
+</body>
+</html>
